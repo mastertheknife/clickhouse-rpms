@@ -2,7 +2,7 @@
 
 **Unofficial** ClickHouse RPMs and SRPMs for RHEL 8 \ CentOS 8 \ Oracle Linux 8 \ Alma Linux 8 \ Rocky Linux 8 and other derivatives of RHEL 8.
 
-Natively built on CentOS 8 from a SPEC file for x86_64 and aarch64. Uses the OS libraries when possible and safe to do so. Requires the EPEL repository.
+Natively built for x86_64 and aarch64 (ARM64) on CentOS 8 from a SPEC file. Uses the OS libraries when possible and safe to do so. Requires the EPEL repository.
 The server RPM includes a systemd service (clickhouse-server). Just install and start using :-)
 
 You can find the RPMs and the SRPMs here:
@@ -24,7 +24,7 @@ This currently requires CentOS Stream 8 to build, because of the newer cmake ver
 Also requires dwz 0.14 or newer, because dwz 0.12 and 0.13 crash due to the large size of debuginfo. dwz 0.14 for EL8 can be found here:
 https://download.opensuse.org/repositories/home:/mastertheknife/CentOS_8/
 
-The source .tar.xz was created as follows:
+The source .tar.xz are created as follows:
 ```
 git clone git@github.com:clickhouse/clickhouse.git --branch v21.2.5.5-stable --depth 1 clickhouse-21.2.5.5
 cd clickhouse-21.2.5.5
