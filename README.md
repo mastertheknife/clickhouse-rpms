@@ -26,7 +26,7 @@ https://download.opensuse.org/repositories/home:/mastertheknife/CentOS_8/
 
 The source .tar.xz are created as follows:
 ```
-git clone git@github.com:clickhouse/clickhouse.git --branch v21.2.5.5-stable --depth 1 clickhouse-21.2.5.5
+git clone https://github.com/ClickHouse/ClickHouse.git --branch v21.2.5.5-stable --depth 1 clickhouse-21.2.5.5
 cd clickhouse-21.2.5.5
 git submodule update --init --recursive --depth=1
 git rev-parse HEAD > src-git-head.txt
