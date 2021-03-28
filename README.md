@@ -10,6 +10,7 @@ You can find the RPMs and the SRPMs here:
 
 #### Alternative repositories:
 ClickHouse \*-stable repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-stable/CentOS_8/
+
 ClickHouse \*-lts repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-lts/CentOS_8/
 
 These only contain the last version and do not keep older versions.
