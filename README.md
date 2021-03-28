@@ -6,11 +6,16 @@ Natively built for x86_64 and aarch64 (ARM64) on CentOS 8 from a SPEC file. Uses
 The server RPM includes a systemd service (clickhouse-server). Just install and start using :-)
 
 You can find the RPMs and the SRPMs here:
+### https://repo.kfir.tech/clickhouse/
 
-#### ClickHouse \*-stable repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-stable/CentOS_8/
-#### ClickHouse \*-lts repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-lts/CentOS_8/
+#### Alternative repositories:
+ClickHouse \*-stable repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-stable/CentOS_8/
+ClickHouse \*-lts repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-lts/CentOS_8/
 
-Please note that sometimes the LTS contains a newer version than the stable. For example, as of this writing, latest LTS is 21.3 and latest stable is 21.2.
+These only contain the last version and do not keep older versions.
+Also, please note that sometimes the LTS contains a newer version than the stable. For example, as of this writing, latest LTS is 21.3 and latest stable is 21.2.
+
+### Some info
 
 I originally created these for my own use, but given the effort of creating it and maintaining it, its worth sharing :-)
 The RPMs are built on OpenSUSE's excellent OBS (Open Build Service).
@@ -21,10 +26,13 @@ https://build.opensuse.org/package/show/home:mastertheknife:clickhouse-lts/Click
 ### If you want to build the RPMs yourself:
 
 This currently requires CentOS Stream 8 to build, because of the newer cmake version.
-Also requires dwz 0.14 or newer, because dwz 0.12 and 0.13 crash due to the large size of debuginfo. dwz 0.14 for EL8 can be found here:
+Also requires dwz 0.14 or newer, because dwz 0.12 and 0.13 crash often due to the large size of debuginfo. dwz 0.14 for EL8 can be found here:
 https://download.opensuse.org/repositories/home:/mastertheknife/CentOS_8/
 
-The source .tar.xz are created as follows:
+Get the SPEC file and the sources, from OBS or the SRPM, and run `rpmbuild -ba ~/rpmbuild/clickhouse.spec`
+
+#### Source preparation
+The source .tar.xz files are created as follows:
 ```
 git clone https://github.com/ClickHouse/ClickHouse.git --branch v21.2.5.5-stable --depth 1 clickhouse-21.2.5.5
 cd clickhouse-21.2.5.5
@@ -35,3 +43,4 @@ rm -rf .git
 cd ..
 XZ_OPT="-9 -e" tar cvJf clickhouse-21.2.5.5.tar.xz clickhouse-21.2.5.5
 ```
+
