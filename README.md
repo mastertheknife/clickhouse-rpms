@@ -1,4 +1,4 @@
-# ClickHouse RPMs and SRPMs for RHEL8\CentOS8
+# ClickHouse RPMs for RHEL8\CentOS8
 
 **Unofficial** ClickHouse RPMs and SRPMs for RHEL 8 \ CentOS 8 \ Oracle Linux 8 \ Alma Linux 8 \ Rocky Linux 8 and other derivatives of RHEL 8.
 
@@ -16,7 +16,7 @@ ClickHouse \*-lts repository: https://download.opensuse.org/repositories/home:/m
 These only contain the last version and do not keep older versions.
 Also, please note that sometimes the LTS contains a newer version than the stable. For example, as of this writing, latest LTS is 21.3 and latest stable is 21.2.
 
-### Some info
+### Some background
 
 I originally created these for my own use, but given the effort of creating it and maintaining it, its worth sharing :-)
 The RPMs are built on OpenSUSE's excellent OBS (Open Build Service).
