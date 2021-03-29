@@ -3,10 +3,16 @@
 **Unofficial** ClickHouse RPMs and SRPMs for RHEL 8 \ CentOS 8 \ Oracle Linux 8 \ Alma Linux 8 \ Rocky Linux 8 and other derivatives of RHEL 8.
 
 Natively built for x86_64 and aarch64 (ARM64) on CentOS 8 from a SPEC file. Uses the OS libraries when possible and safe to do so. Requires the EPEL repository.
-The server RPM includes a systemd service (clickhouse-server). Just install and start using :-)
+The server RPM includes a systemd service (clickhouse-server).
 
 You can find the RPMs and the SRPMs here:
 ### https://repo.kfir.tech/clickhouse/
+
+## Installation:
+```
+sudo wget https://repo.kfir.tech/clickhouse/el8/kfirtech-clickhouse.repo -O "/etc/yum.repos.d/kfirtech-clickhouse.repo"
+dnf install clickhouse-client clickhouse-server
+```
 
 #### Alternative repositories:
 ClickHouse \*-stable repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-stable/CentOS_8/
@@ -30,7 +36,7 @@ This currently requires CentOS Stream 8 to build, because of the newer cmake ver
 Also requires dwz 0.14 or newer, because dwz 0.12 and 0.13 crash often due to the large size of debuginfo. dwz 0.14 for EL8 can be found here:
 https://download.opensuse.org/repositories/home:/mastertheknife/CentOS_8/
 
-Get the SPEC file and the sources, from OBS or the SRPM, and run `rpmbuild -ba ~/rpmbuild/clickhouse.spec`
+Get the SPEC file and the sources, from OBS or the SRPM, and run `rpmbuild -ba ~/rpmbuild/SPECS/clickhouse.spec`
 
 #### Source preparation
 The source .tar.xz files are created as follows:
@@ -44,4 +50,3 @@ rm -rf .git
 cd ..
 XZ_OPT="-9 -e" tar cvJf clickhouse-21.2.5.5.tar.xz clickhouse-21.2.5.5
 ```
-
