@@ -2,7 +2,7 @@
 
 **Unofficial** ClickHouse RPMs and SRPMs for RHEL 8 \ CentOS 8 \ Oracle Linux 8 \ Alma Linux 8 \ Rocky Linux 8 and other derivatives of RHEL 8.
 
-Natively built for x86_64 and aarch64 (ARM64) on CentOS 8 from a SPEC file. Uses the OS libraries when possible and safe to do so. Requires the EPEL repository.
+Natively built for x86_64, aarch64 (ARM64) and ppc64le (PowerPC) on CentOS 8. Uses the OS libraries when possible and safe to do so. **Requires the EPEL repository.**
 The server RPM includes a systemd service (clickhouse-server).
 
 You can find the RPMs and the SRPMs here:
@@ -14,12 +14,12 @@ sudo wget https://repo.kfir.tech/clickhouse/el8/kfirtech-clickhouse.repo -O "/et
 dnf install clickhouse-client clickhouse-server
 ```
 
-#### Alternative repositories:
+#### Alternative repositories (build repositories):
 ClickHouse \*-stable repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-stable/CentOS_8/
 
 ClickHouse \*-lts repository: https://download.opensuse.org/repositories/home:/mastertheknife:/clickhouse-lts/CentOS_8/
 
-These only contain the last version and do not keep older versions.
+These only contain the last version and do not keep older versions. The older versions can be found in the main repository above.
 Also, please note that sometimes the LTS contains a newer version than the stable. For example, as of this writing, latest LTS is 21.3 and latest stable is 21.2.
 
 ### Some background
