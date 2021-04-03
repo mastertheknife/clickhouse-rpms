@@ -2,8 +2,11 @@
 
 **Unofficial** ClickHouse RPMs and SRPMs for RHEL 8 \ CentOS 8 \ Oracle Linux 8 \ Alma Linux 8 \ Rocky Linux 8 and other derivatives of RHEL 8.
 
-Natively built for x86_64, aarch64 (ARM64) and ppc64le (PowerPC) on CentOS 8. Uses the OS libraries when possible and safe to do so. **Requires the EPEL repository.**
+Natively built for x86_64, aarch64 (ARM64) and ppc64le (PowerPC) on CentOS 8. Uses the OS libraries when possible and safe to do so. 
 The server RPM includes a systemd service (clickhouse-server).
+
+* **Requires the EPEL repository**
+* Doesn't work with SELinux in enforcing mode (TODO)
 
 You can find the RPMs and the SRPMs here:
 ### https://repo.kfir.tech/clickhouse/
