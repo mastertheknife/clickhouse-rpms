@@ -1,5 +1,7 @@
 # 2022 Update:
-I am no longer mainataining this. The official RPMs have became good enough, and ARM64 RPMs are available officially. There is pretty much no need for these unofficial RPMs anymore. Please use the official RPMs.
+I am no longer maintaining this. The official RPMs have became good enough, and ARM64 RPMs are now available officially. There is pretty much no need for these unofficial RPMs anymore. Please use the official RPMs.
+
+
 
 # ClickHouse RPMs for RHEL8\CentOS8
 
