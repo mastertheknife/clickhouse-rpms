@@ -1,6 +1,7 @@
+# 2022 Update:
+I am no longer mainataining this. The official RPMs have became good enough, and ARM64 RPMs are available officially. There is pretty much no need for these unofficial RPMs anymore. Please use the official RPMs.
+
 # ClickHouse RPMs for RHEL8\CentOS8
-
-
 
 **Unofficial** ClickHouse RPMs and SRPMs for RHEL 8 \ CentOS 8 \ Oracle Linux 8 \ Alma Linux 8 \ Rocky Linux 8 and other derivatives of RHEL 8.
 
